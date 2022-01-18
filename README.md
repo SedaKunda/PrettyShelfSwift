@@ -8,3 +8,4 @@ It queries the OpenLibrary API to allow the user to search for a book using its 
 
 It was created to help me compare making apps in Swift, Dart and Kotlin.
 - The [Dart/Flutter](https://github.com/SedaKunda/PrettyShelf) version.
+- The [Kotlin](https://github.com/SedaKunda/PrettyShelfKotlin) version.
