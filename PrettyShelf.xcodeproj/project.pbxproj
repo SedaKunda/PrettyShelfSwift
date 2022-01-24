@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B042A5922799B87B00811583 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A5912799B87B00811583 /* HomeUIView.swift */; };
 		B0A7972D2796E98E006D9965 /* PrettyShelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7972C2796E98E006D9965 /* PrettyShelfApp.swift */; };
-		B0A7972F2796E98E006D9965 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7972E2796E98E006D9965 /* ContentView.swift */; };
 		B0A797312796E990006D9965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A797302796E990006D9965 /* Assets.xcassets */; };
 		B0A797342796E990006D9965 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A797332796E990006D9965 /* Preview Assets.xcassets */; };
 		B0A7973E2796E991006D9965 /* PrettyShelfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7973D2796E991006D9965 /* PrettyShelfTests.swift */; };
 		B0A797482796E991006D9965 /* PrettyShelfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A797472796E991006D9965 /* PrettyShelfUITests.swift */; };
 		B0A7974A2796E991006D9965 /* PrettyShelfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A797492796E991006D9965 /* PrettyShelfUITestsLaunchTests.swift */; };
 		B0A797572796EA66006D9965 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A797562796EA66006D9965 /* Book.swift */; };
+		B0A797592798232D006D9965 /* OpenLibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A797582798232D006D9965 /* OpenLibraryAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B042A5912799B87B00811583 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
 		B0A797292796E98E006D9965 /* PrettyShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrettyShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A7972C2796E98E006D9965 /* PrettyShelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyShelfApp.swift; sourceTree = "<group>"; };
-		B0A7972E2796E98E006D9965 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B0A797302796E990006D9965 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0A797332796E990006D9965 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B0A797392796E991006D9965 /* PrettyShelfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrettyShelfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +47,7 @@
 		B0A797472796E991006D9965 /* PrettyShelfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyShelfUITests.swift; sourceTree = "<group>"; };
 		B0A797492796E991006D9965 /* PrettyShelfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyShelfUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B0A797562796EA66006D9965 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		B0A797582798232D006D9965 /* OpenLibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLibraryAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +99,11 @@
 			isa = PBXGroup;
 			children = (
 				B0A7972C2796E98E006D9965 /* PrettyShelfApp.swift */,
-				B0A7972E2796E98E006D9965 /* ContentView.swift */,
 				B0A797302796E990006D9965 /* Assets.xcassets */,
 				B0A797322796E990006D9965 /* Preview Content */,
 				B0A797562796EA66006D9965 /* Book.swift */,
+				B0A797582798232D006D9965 /* OpenLibraryAPI.swift */,
+				B042A5912799B87B00811583 /* HomeUIView.swift */,
 			);
 			path = PrettyShelf;
 			sourceTree = "<group>";
@@ -260,7 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A7972F2796E98E006D9965 /* ContentView.swift in Sources */,
+				B0A797592798232D006D9965 /* OpenLibraryAPI.swift in Sources */,
+				B042A5922799B87B00811583 /* HomeUIView.swift in Sources */,
 				B0A7972D2796E98E006D9965 /* PrettyShelfApp.swift in Sources */,
 				B0A797572796EA66006D9965 /* Book.swift in Sources */,
 			);
@@ -423,6 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PrettyShelf/Preview Content\"";
+				DEVELOPMENT_TEAM = FAT7LBYB85;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -451,6 +456,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PrettyShelf/Preview Content\"";
+				DEVELOPMENT_TEAM = FAT7LBYB85;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

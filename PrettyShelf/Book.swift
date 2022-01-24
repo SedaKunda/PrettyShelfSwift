@@ -8,34 +8,34 @@
 import Foundation
 import SwiftUI
 
-struct Book: Codable {
-    let publishers: [String]
-    let subtitle: String
-    let lastModified: Created
-    let sourceRecords: [String]
+class Book: ObservableObject, Codable {
+    let publishers: [String]?
+    let subtitle: String?
+    let lastModified: Created?
+    let sourceRecords: [String]?
     let title: String
-    let numberOfPages: Int
-    let isbn13: [String]
-    let isbn10: [String]
-    let weight: String
-    let physicalFormat: String
-    let identifiers: Identifiers
-    let oclcNumbers: [String]
-    let physicalDimensions: [String]
-    let covers: [Int]
-    let ocaid: String
-    let lccn: [String]
-    let created: Created
-    let languages: [TypeElement]
-    let fullTitle: String
-    let lcClassifications: [String]
-    let publishDate, key: String
-    let authors: [TypeElement]
-    let latestRevision: Int
-    let works: [TypeElement]
-    let type: TypeElement
-    let subjects: [String]
-    let revision: Int
+    let numberOfPages: Int?
+    let isbn13: [String]?
+    let isbn10: [String]?
+    let weight: String?
+    let physicalFormat: String?
+    let identifiers: Identifiers?
+    let oclcNumbers: [String]?
+    let physicalDimensions: String?
+    let covers: [Int]?
+    let ocaid: String?
+    let lccn: [String]?
+    let created: Created?
+    let languages: [TypeElement]?
+    let fullTitle: String?
+    let lcClassifications: [String]?
+    let publishDate, key: String?
+    let authors: [TypeElement]?
+    let latestRevision: Int?
+    let works: [TypeElement]?
+    let type: TypeElement?
+    let subjects: [String]?
+    let revision: Int?
 
     enum CodingKeys: String, CodingKey {
         case publishers, subtitle
@@ -69,7 +69,7 @@ struct Created: Codable {
 }
 
 struct Identifiers: Codable {
-    let libraryThing, goodReads: [String]
+    let libraryThing, goodReads: [String]?
     
     enum CodingKeys: String, CodingKey {
         case libraryThing = "library_thing"
