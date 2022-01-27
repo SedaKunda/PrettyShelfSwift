@@ -10,7 +10,7 @@ import Foundation
 class OpenLibraryAPI : ObservableObject{
 
     func fetchBook(
-        isbn: String,
+        _ isbn: String,
         decoder: JSONDecoder = JSONDecoder(),
         completion:@escaping (Book) -> ()) {
             

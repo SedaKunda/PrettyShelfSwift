@@ -21,13 +21,14 @@ struct HomeUIView: View {
                 .background(Color.gray)
                 .cornerRadius(20.0)
                 .frame(width: 300, height: 50)
-            Button(action: { getTitle(isbn: self.isbn) }) {
+            Button(action: { getTitle(self.isbn) }) {
                 Text("Search")
                     .font(.headline)
                     .foregroundColor(.white)
                     .frame(width: 300, height: 50)
                     .background(Color.blue)
                     .cornerRadius(15.0) }
+            Spacer()
             if showText {
                 VStack(alignment: .leading) {
                     Text("Title: \(value)")
@@ -35,11 +36,11 @@ struct HomeUIView: View {
                 }
             }
             Spacer()
-        }.padding(.all, 20)
+        }.padding([.leading, .bottom, .trailing], 20)
     }
     
-    func getTitle(isbn: String) -> () {
-        return OpenLibraryAPI().fetchBook(isbn: isbn) { (book) in
+    func getTitle(_ isbn: String) -> () {
+        return OpenLibraryAPI().fetchBook(isbn) { (book) in
             self.value = book.title
             if let subjectValue = book.subjects {
                 self.category = subjectValue.joined(separator: ", ")
