@@ -9,9 +9,9 @@ import SwiftUI
 
 struct HomeUIView: View {
 
-    @State private var isbn: String = ""
-    @State private var value: String = ""
-    @State private var category: String = ""
+    @State private var isbn = ""
+    @State private var value = ""
+    @State private var category = ""
     @State private var showText = false
     
     var body: some View {
@@ -21,13 +21,12 @@ struct HomeUIView: View {
                 .background(Color.gray)
                 .cornerRadius(20.0)
                 .frame(width: 300, height: 50)
-            Button(action: { getTitle(self.isbn) }) {
-                Text("Search")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .frame(width: 300, height: 50)
-                    .background(Color.blue)
-                    .cornerRadius(15.0) }
+            Button("Search") { getTitle(self.isbn) }
+                .font(.headline)
+                .foregroundColor(.white)
+                .frame(width: 300, height: 50)
+                .background(Color.blue)
+                .cornerRadius(15.0)
             Spacer()
             if showText {
                 VStack(alignment: .leading) {
@@ -39,7 +38,7 @@ struct HomeUIView: View {
         }.padding([.leading, .bottom, .trailing], 20)
     }
     
-    func getTitle(_ isbn: String) -> () {
+    private func getTitle(_ isbn: String) -> () {
         return OpenLibraryAPI().fetchBook(isbn) { (book) in
             self.value = book.title
             if let subjectValue = book.subjects {
