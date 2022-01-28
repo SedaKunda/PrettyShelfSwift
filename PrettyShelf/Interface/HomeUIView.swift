@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeUIView: View {
+struct HomeView: View {
 
     @State private var isbn = ""
     @State private var value = ""
@@ -51,6 +51,6 @@ struct HomeUIView: View {
 
 struct HomeUIView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeUIView()
+        HomeView()
     }
 }

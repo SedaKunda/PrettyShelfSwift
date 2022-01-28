@@ -11,7 +11,7 @@ import SwiftUI
 struct PrettyShelfApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeUIView()
+            HomeView()
         }
     }
 }
