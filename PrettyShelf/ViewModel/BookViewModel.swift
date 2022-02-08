@@ -18,23 +18,19 @@ extension HomeView {
         @Published var showText = false
         
         private var cancellable: AnyCancellable?
+        let session: URLSession
         
-        func getUrl(_ isbn: String) -> URL? {
-            var components = URLComponents()
-                components.scheme = "https"
-                components.host = "openlibrary.org"
-                components.path = "/isbn/\(isbn).json"
-            
-            return components.url
+        init(urlSession: URLSession = .shared) {
+            self.session = urlSession
         }
-
-        func fetchBook(_ isbn: String) {
-            guard let url = getUrl(isbn) else {
+        
+        func getBook(_ isbn: String) {
+            guard let url = Endpoint().getUrl(isbn) else {
                 print("Invalid url...")
                 return
             }
 
-            cancellable = URLSession.shared.dataTaskPublisher(for: url)
+            cancellable = session.dataTaskPublisher(for: url)
                 .map({
                     $0.data
                 })
@@ -42,21 +38,29 @@ extension HomeView {
                 .receive(on: DispatchQueue.main)
                 .sink(
                     receiveCompletion: { (completion) in
-                        switch completion {
-                            case .finished:
-                                self.showText = true
-                                break
-                            case .failure(let error):
-                                print("Error with fetching books: \(error)")
-                        }
+                        self.onBookSet(completion)
                     },
                     receiveValue: { (book) in
-                        self.book.append(book)
-                        self.title = self.book[0].title
-                        if let subjectValue = self.book[0].subjects {
-                            self.category = subjectValue.joined(separator: ", ")
-                        }
+                        self.setBook(book)
                     })
+        }
+
+        func setBook(_ book: Book) {
+            self.book.append(book)
+            self.title = self.book[0].title
+            if let subjectValue = self.book[0].subjects {
+                self.category = subjectValue.joined(separator: ", ")
+            }
+        }
+        
+        func onBookSet(_ completion: Subscribers.Completion<Error>) {
+            switch completion {
+            case .finished:
+                self.showText = true
+                break
+            case .failure(let error):
+                print("Error with fetching books: \(error)")
+            }
         }
     }
 }

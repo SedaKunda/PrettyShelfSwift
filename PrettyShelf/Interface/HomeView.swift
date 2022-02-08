@@ -20,7 +20,7 @@ struct HomeView: View {
                 .cornerRadius(20.0)
                 .frame(width: 300, height: 50)
             Button("Search") {
-                viewModel.fetchBook(self.isbn)
+                viewModel.getBook(self.isbn)
             }
                 .font(.headline)
                 .foregroundColor(.white)

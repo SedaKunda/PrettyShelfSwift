@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B042A5922799B87B00811583 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A5912799B87B00811583 /* HomeView.swift */; };
 		B042A59627A4546800811583 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A59527A4546800811583 /* BookViewModel.swift */; };
+		B0611A9227B2D55A00C84530 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0611A9127B2D55A00C84530 /* Endpoint.swift */; };
+		B0611A9427B2D73300C84530 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0611A9327B2D73300C84530 /* EndpointTests.swift */; };
 		B0A7972D2796E98E006D9965 /* PrettyShelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7972C2796E98E006D9965 /* PrettyShelfApp.swift */; };
 		B0A797312796E990006D9965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A797302796E990006D9965 /* Assets.xcassets */; };
 		B0A797342796E990006D9965 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A797332796E990006D9965 /* Preview Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		B042A5912799B87B00811583 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B042A59527A4546800811583 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		B0611A9127B2D55A00C84530 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		B0611A9327B2D73300C84530 /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		B0A797292796E98E006D9965 /* PrettyShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrettyShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A7972C2796E98E006D9965 /* PrettyShelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyShelfApp.swift; sourceTree = "<group>"; };
 		B0A797302796E990006D9965 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				B042A59527A4546800811583 /* BookViewModel.swift */,
+				B0611A9127B2D55A00C84530 /* Endpoint.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				B0A7973D2796E991006D9965 /* PrettyShelfTests.swift */,
+				B0611A9327B2D73300C84530 /* EndpointTests.swift */,
 			);
 			path = PrettyShelfTests;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 				B042A5922799B87B00811583 /* HomeView.swift in Sources */,
 				B0A7972D2796E98E006D9965 /* PrettyShelfApp.swift in Sources */,
 				B0A797572796EA66006D9965 /* Book.swift in Sources */,
+				B0611A9227B2D55A00C84530 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0611A9427B2D73300C84530 /* EndpointTests.swift in Sources */,
 				B0A7973E2796E991006D9965 /* PrettyShelfTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
