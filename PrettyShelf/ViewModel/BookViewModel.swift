@@ -11,20 +11,25 @@ import Combine
 
 extension HomeView {
     @MainActor class BookViewModel : ObservableObject {
+        
         @Published var book = [Book]()
         @Published var category = ""
         @Published var title = ""
         @Published var showText = false
+        
         private var cancellable: AnyCancellable?
-
-        func fetchBook(_ isbn: String) {
-                
+        
+        func getUrl(_ isbn: String) -> URL? {
             var components = URLComponents()
                 components.scheme = "https"
                 components.host = "openlibrary.org"
                 components.path = "/isbn/\(isbn).json"
             
-            guard let url = components.url else {
+            return components.url
+        }
+
+        func fetchBook(_ isbn: String) {
+            guard let url = getUrl(isbn) else {
                 print("Invalid url...")
                 return
             }
