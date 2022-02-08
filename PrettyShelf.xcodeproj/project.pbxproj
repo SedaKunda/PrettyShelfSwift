@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B042A5922799B87B00811583 /* HomeUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A5912799B87B00811583 /* HomeUIView.swift */; };
+		B042A5922799B87B00811583 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A5912799B87B00811583 /* HomeView.swift */; };
 		B042A59627A4546800811583 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B042A59527A4546800811583 /* BookViewModel.swift */; };
 		B0A7972D2796E98E006D9965 /* PrettyShelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7972C2796E98E006D9965 /* PrettyShelfApp.swift */; };
 		B0A797312796E990006D9965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A797302796E990006D9965 /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B042A5912799B87B00811583 /* HomeUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIView.swift; sourceTree = "<group>"; };
+		B042A5912799B87B00811583 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B042A59527A4546800811583 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		B0A797292796E98E006D9965 /* PrettyShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrettyShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A7972C2796E98E006D9965 /* PrettyShelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyShelfApp.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				B042A59527A4546800811583 /* BookViewModel.swift */,
-				B042A5912799B87B00811583 /* HomeUIView.swift */,
+				B042A5912799B87B00811583 /* HomeView.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -292,7 +292,7 @@
 			files = (
 				B042A59627A4546800811583 /* BookViewModel.swift in Sources */,
 				B0A797592798232D006D9965 /* OpenLibraryAPI.swift in Sources */,
-				B042A5922799B87B00811583 /* HomeUIView.swift in Sources */,
+				B042A5922799B87B00811583 /* HomeView.swift in Sources */,
 				B0A7972D2796E98E006D9965 /* PrettyShelfApp.swift in Sources */,
 				B0A797572796EA66006D9965 /* Book.swift in Sources */,
 			);

@@ -10,10 +10,8 @@ import SwiftUI
 struct HomeView: View {
 
     @State private var isbn = ""
-    @State private var value = ""
-    @State private var category = ""
-    @State private var showText = false
-    
+    @StateObject private var viewModel = BookViewModel()
+     
     var body: some View {
         VStack() {
             TextField("ISBN", text: $isbn)
@@ -21,31 +19,23 @@ struct HomeView: View {
                 .background(Color.gray)
                 .cornerRadius(20.0)
                 .frame(width: 300, height: 50)
-            Button("Search") { getTitle(self.isbn) }
+            Button("Search") {
+                viewModel.fetchBook(self.isbn)
+            }
                 .font(.headline)
                 .foregroundColor(.white)
                 .frame(width: 300, height: 50)
                 .background(Color.blue)
                 .cornerRadius(15.0)
             Spacer()
-            if showText {
+            if viewModel.showText {
                 VStack(alignment: .leading) {
-                    Text("Title: \(value)")
-                    Text("Subject: \(category)")
+                    Text("Title: \(viewModel.title)")
+                    Text("Subject: \(viewModel.category)")
                 }
             }
             Spacer()
         }.padding([.leading, .bottom, .trailing], 20)
-    }
-    
-    private func getTitle(_ isbn: String) -> () {
-        return OpenLibraryAPI().fetchBook(isbn) { (book) in
-            self.value = book.title
-            if let subjectValue = book.subjects {
-                self.category = subjectValue.joined(separator: ", ")
-            }
-            showText = true
-        }
     }
 }
 
