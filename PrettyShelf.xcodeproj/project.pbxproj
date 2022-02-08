@@ -16,7 +16,6 @@
 		B0A797482796E991006D9965 /* PrettyShelfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A797472796E991006D9965 /* PrettyShelfUITests.swift */; };
 		B0A7974A2796E991006D9965 /* PrettyShelfUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A797492796E991006D9965 /* PrettyShelfUITestsLaunchTests.swift */; };
 		B0A797572796EA66006D9965 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A797562796EA66006D9965 /* Book.swift */; };
-		B0A797592798232D006D9965 /* OpenLibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A797582798232D006D9965 /* OpenLibraryAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +48,6 @@
 		B0A797472796E991006D9965 /* PrettyShelfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyShelfUITests.swift; sourceTree = "<group>"; };
 		B0A797492796E991006D9965 /* PrettyShelfUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyShelfUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B0A797562796EA66006D9965 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		B0A797582798232D006D9965 /* OpenLibraryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLibraryAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,18 +83,17 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
-		B042A59727A4552F00811583 /* Services */ = {
+		B042A59727A4552F00811583 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B0A797582798232D006D9965 /* OpenLibraryAPI.swift */,
+				B042A59527A4546800811583 /* BookViewModel.swift */,
 			);
-			path = Services;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B042A59827A4562400811583 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				B042A59527A4546800811583 /* BookViewModel.swift */,
 				B042A5912799B87B00811583 /* HomeView.swift */,
 			);
 			path = Interface;
@@ -126,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				B042A59827A4562400811583 /* Interface */,
-				B042A59727A4552F00811583 /* Services */,
+				B042A59727A4552F00811583 /* ViewModel */,
 				B042A59427A453E900811583 /* DataModel */,
 				B0A7972C2796E98E006D9965 /* PrettyShelfApp.swift */,
 				B0A797302796E990006D9965 /* Assets.xcassets */,
@@ -291,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B042A59627A4546800811583 /* BookViewModel.swift in Sources */,
-				B0A797592798232D006D9965 /* OpenLibraryAPI.swift in Sources */,
 				B042A5922799B87B00811583 /* HomeView.swift in Sources */,
 				B0A7972D2796E98E006D9965 /* PrettyShelfApp.swift in Sources */,
 				B0A797572796EA66006D9965 /* Book.swift in Sources */,
